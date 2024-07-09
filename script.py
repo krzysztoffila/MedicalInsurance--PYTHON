@@ -7,3 +7,15 @@ medical_records = list(zip(names, insurance_costs))
 print(medical_records)
 num_medical_records = len(medical_records)
 print("There are " + str(num_medical_records) + " medical records.")
+first_medical_record = medical_records[0]
+print("Here is the first medical record:" + str(first_medical_record))
+medical_records.sort(key=lambda record: record[1])
+print("Here are the medical records sorted by insurance cost: " + str(medical_records))
+cheapest_three = medical_records[:3]
+print("Here are the three cheapest insurance costs in our medical records: " + str(cheapest_three))
+priciest_three = medical_records[-3:]
+print("Here are the three most expensive insurance costs in our medical records: " + str(priciest_three))
+occurrences_paul = names.count("Paul")
+print("There are " + str(occurrences_paul) + "individuals with the name Paul in our medical records.")
+sorted_names = sorted(names)
+print(sorted_names)
