@@ -20,3 +20,6 @@ for i in range(len(names)):
     print("The insurance cost for "+str(name)+" is below average")
   else: 
     print("The insurance cost for "+str(name)+" is equal average")
+
+updated_estimated_costs = [estimated_cost * 11/10 for estimated_cost in estimated_insurance_costs]
+print(updated_estimated_costs == actual_insurance_costs)
