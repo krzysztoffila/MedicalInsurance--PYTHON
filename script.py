@@ -19,3 +19,9 @@ for character in updated_medical_data:
   if character == "$":
     num_records += 1 
 print("There are " + str(num_records) + " medical records in the data.")
+
+medical_data_split = updated_medical_data.split(";")
+medical_records = []
+for record in medical_data_split:
+  medical_records.append(record.split(","))
+print(medical_records)
