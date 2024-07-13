@@ -46,3 +46,10 @@ for record in medical_records_clean:
 # print("Ages: " + str(ages))
 # print("BMI: "  + str(bmis))
 # print("Insurance Costs: " + str(insurance_costs))
+total_bmi = 0
+for bmi in bmis:
+  total_bmi += float(bmi)
+
+average_bmi = total_bmi / len(bmis)
+average_bmi = round(average_bmi, 2)
+# print("Average BMI: " + str(average_bmi))
