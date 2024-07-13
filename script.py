@@ -53,3 +53,17 @@ for bmi in bmis:
 average_bmi = total_bmi / len(bmis)
 average_bmi = round(average_bmi, 2)
 # print("Average BMI: " + str(average_bmi))
+# Calculate the total insurance cost
+total_insurance_cost = 0
+for cost in insurance_costs:
+  total_insurance_cost += float(cost.replace('$', ''))
+
+# Calculate the average insurance cost
+average_insurance_cost = total_insurance_cost / len(insurance_costs)
+average_insurance_cost = round(average_insurance_cost, 2)
+
+print("Average Insurance Cost: $" + str(average_insurance_cost))
+
+# Output string for each individual
+for i in range(len(names)):
+  print(f"{names[i]} is {ages[i]} years old with a BMI of {bmis[i]} and insurance cost of {insurance_costs[i]}.")
