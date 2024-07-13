@@ -11,3 +11,11 @@ Sylvie Charles   ,22, 22.1
 19,22.7 , #2900.0 ; 
 Lorena Hodson ,65, 33.1 , #19370.0; 
 Isaac Vu ,34, 24.8,   #7045.0"""
+
+updated_medical_data = medical_data.replace('#', "$")
+print(updated_medical_data)
+num_records = 0
+for character in updated_medical_data:
+  if character == "$":
+    num_records += 1 
+print("There are " + str(num_records) + " medical records in the data.")
