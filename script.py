@@ -13,7 +13,6 @@ Lorena Hodson ,65, 33.1 , #19370.0;
 Isaac Vu ,34, 24.8,   #7045.0"""
 
 updated_medical_data = medical_data.replace('#', "$")
-print(updated_medical_data)
 num_records = 0
 for character in updated_medical_data:
   if character == "$":
@@ -24,4 +23,12 @@ medical_data_split = updated_medical_data.split(";")
 medical_records = []
 for record in medical_data_split:
   medical_records.append(record.split(","))
-print(medical_records)
+
+medical_records_clean = []
+for record in medical_records:
+    record_clean = []
+    for item in record:
+        record_clean.append(item.strip())
+    medical_records_clean.append(record_clean)
+
+print(medical_records_clean)
